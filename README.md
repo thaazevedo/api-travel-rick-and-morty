@@ -1,4 +1,4 @@
-# code-challenge
+# API TRAVEL-PLANS
 
 Este projeto consiste em uma API de planejamento de Viagens pelos planetas e dimensões
 do universo de Rick and Morty. Como parte de sua estrutura a API TRAVEL PLANS, utiliza
