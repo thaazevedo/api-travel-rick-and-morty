@@ -1,0 +1,31 @@
+version: "3"
+services:
+  travel-planner-api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      # - "5432:5432"
+    depends_on:
+      - pg
+    networks:
+      - pg-network
+
+  pg:
+    image: postgres:lastest
+    container_name: "pg"
+    restart: always
+    hostname: localhost
+    networks:
+      - pg-network
+    environment:
+      - POSTGRES_USER=thays
+      - POSTGRES_PASSWORD=10934912
+      - POSTGRES_DB=code_challenge_development
+    ports:
+      - "5432:5432"
+    
+
+networks:
+  pg-network:
